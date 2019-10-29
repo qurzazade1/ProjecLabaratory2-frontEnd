@@ -1,0 +1,23 @@
+<div class="user-card mb-4">
+  <div class="user-card-photo-wrapper">
+    <ul *ngIf="!signed()" class=" user-icons list-inline animate-li-items text-center">
+      <li class="list-inline-item"><button class="btn btn-secondary btn-lg" 
+          [routerLink]="['/members/', childuser.id]"><i class="fa fa-user"></i></button></li>
+  
+    </ul>
+    <img class="card-img-top" src={{childuser?.photos[0].url}} alt="{{childuser.username}}">
+    <ul *ngIf="signed()" class="list-inline user-icons animate-li-items text-center">
+      <li class="list-inline-item"><button class="btn btn-secondary" 
+          [routerLink]="['/members/', childuser.id]"><i class="fa fa-user"></i></button></li>
+   
+      <li  class="list-inline-item"><button class="btn btn-secondary"><i class="fa fa-envelope"></i></button></li>
+      <li class="list-inline-item"><button class="btn btn-secondary"><i class="fa fa-star"></i></button></li>
+    </ul>
+  
+  </div>
+  <div class="p-*   card-body ">
+    <h5 class="card-title text-center mb-1"><i class="fa fa-user"></i>
+      {{childuser.username}}, {{childuser.city}}
+    </h5>
+  </div>
+</div>

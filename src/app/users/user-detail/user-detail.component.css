@@ -1,0 +1,16 @@
+
+.user-card-footer {
+    padding: 11px 14px;
+    background-color: #fff;
+    border-top: none;
+}
+
+.user-img-thumbnail {
+    margin: 24px;
+    width: 80%;
+    height: 80%;
+}
+
+.user-card-body {
+    padding: 0 30px;
+}

@@ -1,0 +1,71 @@
+<div class="container mt-5">
+  <div class="row">
+    <h2>{{theUser?.username}}'s  Information</h2>
+  </div>
+  <div class="row">
+   
+    <div class="col-sm-7">
+      <div class="tab-panel">
+        <tabset class="member-tabset">
+          <tab heading="About ">
+          <h5> Famous For </h5>  
+            <p>  {{theUser?.fomousFor}}</p>
+            <p>{{theUser.about}}</p>
+            
+          </tab>
+          <tab heading="Skills">
+            
+            <p>{{theUser.skills}}</p>
+          </tab>
+          <tab heading="Photos">
+            <ngx-gallery [options]="thegalleryOptions" [images]="galleryPhotos"></ngx-gallery>
+          </tab>
+          
+        </tabset>
+      </div>
+    </div>
+
+
+    <div class="col-sm-5">
+        <div class="card">
+          <img class="card-img-top user-img-thumbnail" src="{{theUser?.photos[0]?.url}}" alt="{{theUser?.username}}">
+         
+          <div class="user-card-body">
+            <div>
+              <strong>City:</strong>
+              <p>{{theUser?.city}}</p>
+            </div>
+            <div>
+              <strong>Country</strong>
+             <p>  {{theUser?.country}}</p>
+            </div>
+  
+            <div>
+                <strong>Contact Number:</strong>
+                <p>{{theUser?.number}}</p>
+              </div>
+              <div>
+                <strong>Email Address:</strong>
+                <p>{{theUser?.email}}</p>
+              </div>
+  
+            <div>
+              <strong>Last Seen:</strong>
+              <p>{{theUser.lastSeen}}</p>
+            </div>
+           
+            <div>
+              <strong>AccountCreated:</strong>
+              <p>{{theUser.accountCreated}}</p>
+            </div>
+          </div>
+          <div class="user-card-footer">
+            <div    class="btn-group d-flex">
+             <button *ngIf="signed()" class="btn btn-success w-100">Contact</button>
+             <button *ngIf="signed()" class="btn btn-primary w-100">Star</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+
+
+.user-card img {
+    transform: scale(1.0, 1.0);
+  
+     transition-duration: 550ms;
+     transition-timing-function: ease-out;
+     
+}
+
+.user-card:hover img {
+    transform: scale(1.3, 1.3); 
+    transition-timing-function: ease-out;
+    transition-duration: 550ms;
+    opacity: 0.6;
+}
+.user-card-photo-wrapper {
+  
+    overflow: hidden;
+    position: relative;
+  
+}
+.user-card-photo-wrapper:hover .user-icons {
+ 
+    opacity: 1;
+    bottom: 0;
+}
+
+.animate-li-items {
+    transition: all 0.3s ease-in-out;
+}
+
+.user-icons {
+  
+    margin-right: auto;
+    margin-left: auto;
+    opacity: 0;
+    position: absolute;
+    bottom: -32%;    
+    right: 0;
+    left: 0;
+}
+
